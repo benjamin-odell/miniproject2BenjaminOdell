@@ -5,6 +5,8 @@
 
 ## Description
  
+Does budget effect how good a move is?
+This seeks to answer this question.
 
  
 ## Getting Started
@@ -32,7 +34,7 @@ Benjamin Odell
 ## Acknowledgments
  
 Inspiration, code snippets, etc.
-* [Stack Overflow: Save matplotlib file to a directory](https://stackoverflow.com/questions/11373610/save-matplotlib-file-to-a-directory#:~:text=def,raise)
+* [Dataset Used: ](https://www.kaggle.com/datasets/emanafi/clean-imdb-dataset?resource=download)
 * [yfinance Documentation](https://ranaroussi.github.io/yfinance/)
 * [NumPy Documentation](https://numpy.org/doc/stable/user/whatisnumpy.html)
 * [Matplotlib Documentation](https://matplotlib.org/stable/tutorials/pyplot.html)
