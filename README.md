@@ -34,7 +34,7 @@ Benjamin Odell
 ## Acknowledgments
  
 Inspiration, code snippets, etc.
-* [Dataset Used: ](https://www.kaggle.com/datasets/emanafi/clean-imdb-dataset?resource=download)
-* [yfinance Documentation](https://ranaroussi.github.io/yfinance/)
-* [NumPy Documentation](https://numpy.org/doc/stable/user/whatisnumpy.html)
+* [Dataset Used: ](https://www.kaggle.com/datasets/ashpalsingh1525/imdb-movies-dataset)
+* [Y Axis Formatting help](https://queirozf.com/entries/matplotlib-examples-number-formatting-for-axes-labels)
+* [Thousands Comma Tick Labels](https://stackoverflow.com/questions/38152356/dollar-sign-with-thousands-comma-tick-labels)
 * [Matplotlib Documentation](https://matplotlib.org/stable/tutorials/pyplot.html)
