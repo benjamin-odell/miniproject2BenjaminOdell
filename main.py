@@ -46,12 +46,14 @@ movie_budget_arr = [masterpiece_movies['budget_x'].mean(),
 
 movie_cat_arr = ['Masterpiece', 'Great', 'Good', 'Okay', 'Bad']
 
+cat_color_arr = ['royalblue', 'aqua', 'limegreen', 'sandybrown', 'lightcoral']
+
 #configer ticker
 tick_func = ticker.FuncFormatter(lambda x, _: format(int(x), ','))
 
 
 #amount of movies
-plt.bar_label(plt.bar(movie_cat_arr, movie_count_arr),fmt='{:,.0f}')
+plt.bar_label(plt.bar(movie_cat_arr, movie_count_arr, color=cat_color_arr),fmt='{:,.0f}')
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Number of Movies')
 plt.title('Number of Movies of Each Ranking')
@@ -60,7 +62,7 @@ plt.close()
 
 #avg budget
 plt.figure(figsize=(10,6))
-plt.bar_label(plt.bar(movie_cat_arr, movie_budget_arr),fmt='${:,.0f}')
+plt.bar_label(plt.bar(movie_cat_arr, movie_budget_arr, color=cat_color_arr),fmt='${:,.0f}')
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Budget')
 plt.title('Movie Budget by Scores')
