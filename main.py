@@ -9,6 +9,22 @@ import matplotlib.ticker as ticker
 #all the movie data
 data = pd.read_csv('data/imdb_movies.csv')
 
+'''
+we need to filter out movies that are not from the US. 
+The dataset has all budget in native currency.
+This will ensure all budget in USD
+We must also remove all movies that have not been release
+'''
+
+#only use us movies
+data = data[(data['country'] == 'AU') | (data['country'] == 'US')]
+data = data[data['orig_lang'] == ' English']
+print(data.sort_values('score', ascending=False).head(10))
+
+#only use released movies
+data = data[data['status']==' Released']
+
+
 #get user scores
 scores = data['score']
 
@@ -17,17 +33,20 @@ budgets = data['budget_x']
 
 
 #we will split  movies into 5 categories
-#masterpiece >90
-#great >80
-# good >70
+#masterpiece >85
+#great >75
+# good >60
 # ok >50
 #bad <= 50
 
-masterpiece_movies = data[scores > 90]
-great_movies = data[(scores >= 80) & (scores < 90)]
-good_movies = data[(scores >= 70) & (scores < 80)]
-ok_movies = data[(scores >= 50) & (scores < 70)]
+
+masterpiece_movies = data[scores > 85]
+great_movies = data[(scores >= 75) & (scores < 85)]
+good_movies = data[(scores >= 60) & (scores < 75)]
+ok_movies = data[(scores >= 50) & (scores < 60)]
 bad_movies = data[scores < 50]
+
+print(masterpiece_movies)
 
 #count up each how many in each category
 movie_count_arr = [len(masterpiece_movies), len(great_movies), len(good_movies), len(ok_movies), len(bad_movies)]
