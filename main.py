@@ -51,14 +51,16 @@ tick_func = ticker.FuncFormatter(lambda x, _: format(int(x), ','))
 
 
 #amount of movies
-plt.bar(movie_cat_arr, movie_count_arr)
+plt.bar_label(plt.bar(movie_cat_arr, movie_count_arr),fmt='{:,.0f}')
 plt.gca().yaxis.set_major_formatter(tick_func)
+plt.ylabel('Number of Movies')
+plt.title('Number of Movies of Each Ranking')
 plt.show()
 plt.close()
 
 #avg budget
 plt.figure(figsize=(10,6))
-plt.bar(movie_cat_arr, movie_budget_arr)
+plt.bar_label(plt.bar(movie_cat_arr, movie_budget_arr),fmt='${:,.0f}')
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Budget')
 plt.title('Movie Budget by Scores')
