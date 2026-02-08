@@ -9,17 +9,11 @@ import matplotlib.ticker as ticker
 #all the movie data
 data = pd.read_csv('data/imdb_movies.csv')
 
-print(data.head())
-
 #get user scores
 scores = data['score']
 
 #get budget
 budgets = data['budget_x']
-
-#prints scores and budgets
-print(scores)
-print(budgets)
 
 
 #we will split  movies into 5 categories
