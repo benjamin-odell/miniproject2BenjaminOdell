@@ -94,14 +94,19 @@ plt.close()
 #sort movies by score
 movies = data.sort_values('score', ascending=False)
 
+#get number of movies
 count = movies['score'].count()
+#divide into ten chunks. Round up to ensure all movies are considered.
 chunk = math.ceil(count / 10)
 chunks = []
 
+#fill chunks with each group of movies
 for i in range(10):
     chunks.append(movies.iloc[i*chunk:(i+1)*chunk])
 
 scores = []
 
+#get avg score
 for chunk in chunks:
     scores.append(chunk['score'].mean())
+
