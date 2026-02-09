@@ -70,7 +70,7 @@ plt.bar_label(plt.bar(movie_cat_arr, movie_count_arr, color=cat_color_arr),fmt='
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Number of Movies')
 plt.title('Number of Movies of Each Ranking')
-plt.show()
+#plt.show()
 plt.close()
 
 #avg budget
@@ -79,4 +79,8 @@ plt.bar_label(plt.bar(movie_cat_arr, movie_budget_arr, color=cat_color_arr),fmt=
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Budget')
 plt.title('Movie Budget by Scores')
-plt.show()
+#plt.show()
+plt.close()
+
+#sort movies by score
+movies = data.sort_values('score', ascending=False)
