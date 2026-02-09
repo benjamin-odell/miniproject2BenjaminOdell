@@ -124,3 +124,17 @@ plt.ylim([0,100])
 plt.savefig(str(save_path / 'movie_score_by_percent.png'))
 plt.close()
 
+budgets = []
+#get avg budget for each chunk
+for chunk in chunks:
+    budgets.append(chunk['budget_x'].mean())
+
+#chreat a chart of avg budget
+plt.figure(figsize=(12,9))
+plt.bar_label(plt.bar(names,budgets),fmt='{:,.0f}')
+plt.gca().yaxis.set_major_formatter(tick_func)
+plt.title('Movie Budget by Percent')
+plt.xlabel('Percent')
+plt.savefig(str(save_path / 'movie_budget_by_percent.png'))
+plt.show()
+plt.close()
