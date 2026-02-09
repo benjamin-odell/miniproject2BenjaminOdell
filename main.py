@@ -110,3 +110,17 @@ scores = []
 for chunk in chunks:
     scores.append(chunk['score'].mean())
 
+#create percentile list
+names = []
+for i in range(10):
+    names.append(f'{90 - (i * 10)}%')
+
+#create a chart of avg scores
+plt.bar_label(plt.bar(names,scores),fmt='{:,.0f}')
+plt.title('Movie Score by Percent')
+plt.ylabel('Score (0-100)')
+plt.xlabel('Percent')
+plt.ylim([0,100])
+plt.savefig(str(save_path / 'movie_score_by_percent.png'))
+plt.close()
+
