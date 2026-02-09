@@ -5,6 +5,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+import pathlib as path
 
 #all the movie data
 data = pd.read_csv('data/imdb_movies.csv')
@@ -64,6 +65,11 @@ cat_color_arr = ['royalblue', 'aqua', 'limegreen', 'sandybrown', 'lightcoral']
 #configer ticker
 tick_func = ticker.FuncFormatter(lambda x, _: format(int(x), ','))
 
+save_path = path.Path('charts')
+#check if charts folder exists, if not create it
+if not save_path.exists():
+    save_path.mkdir()
+
 
 #amount of movies
 plt.bar_label(plt.bar(movie_cat_arr, movie_count_arr, color=cat_color_arr),fmt='{:,.0f}')
@@ -71,6 +77,7 @@ plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Number of Movies')
 plt.title('Number of Movies of Each Ranking')
 #plt.show()
+plt.savefig(str(save_path / 'movie_count_by_ranking.png'))
 plt.close()
 
 #avg budget
@@ -79,6 +86,7 @@ plt.bar_label(plt.bar(movie_cat_arr, movie_budget_arr, color=cat_color_arr),fmt=
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Budget')
 plt.title('Movie Budget by Scores')
+plt.savefig(str(save_path / 'avg_movie_budget_by_ranking.png'))
 #plt.show()
 plt.close()
 
