@@ -1,6 +1,7 @@
 # INF601 - Advanced Programming in Python
 # Benjamin Odell
 # Mini Project 2
+import math
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -92,3 +93,15 @@ plt.close()
 
 #sort movies by score
 movies = data.sort_values('score', ascending=False)
+
+count = movies['score'].count()
+chunk = math.ceil(count / 10)
+chunks = []
+
+for i in range(10):
+    chunks.append(movies.iloc[i*chunk:(i+1)*chunk])
+
+scores = []
+
+for chunk in chunks:
+    scores.append(chunk['score'].mean())
