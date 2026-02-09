@@ -87,7 +87,7 @@ plt.bar_label(plt.bar(movie_cat_arr, movie_budget_arr, color=cat_color_arr),fmt=
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.ylabel('Budget')
 plt.title('Movie Budget by Scores')
-plt.savefig(str(save_path / 'avg_movie_budget_by_ranking.png'))
+plt.savefig(str(save_path / 'movie_budget_avg_by_ranking.png'))
 #plt.show()
 plt.close()
 
@@ -99,6 +99,11 @@ count = movies['score'].count()
 #divide into ten chunks. Round up to ensure all movies are considered.
 chunk = math.ceil(count / 10)
 chunks = []
+
+#create a list of colors to use for graph
+colors = []
+for i in range(10):
+    colors.append((1 - (i * 0.05),0.5 - (i * 0.025), 1, 1))
 
 #fill chunks with each group of movies
 for i in range(10):
@@ -116,12 +121,12 @@ for i in range(10):
     names.append(f'{90 - (i * 10)}%')
 
 #create a chart of avg scores
-plt.bar_label(plt.bar(names,scores),fmt='{:,.0f}')
+plt.bar_label(plt.bar(names,scores, color=colors),fmt='{:,.0f}')
 plt.title('Movie Score by Percent')
 plt.ylabel('Score (0-100)')
 plt.xlabel('Percent')
 plt.ylim([0,100])
-plt.savefig(str(save_path / 'movie_score_by_percent.png'))
+plt.savefig(str(save_path / 'avg_movie_score_by_percent.png'))
 plt.close()
 
 budgets = []
@@ -131,10 +136,9 @@ for chunk in chunks:
 
 #chreat a chart of avg budget
 plt.figure(figsize=(12,9))
-plt.bar_label(plt.bar(names,budgets),fmt='{:,.0f}')
+plt.bar_label(plt.bar(names,budgets, color=colors),fmt='{:,.0f}')
 plt.gca().yaxis.set_major_formatter(tick_func)
 plt.title('Movie Budget by Percent')
 plt.xlabel('Percent')
-plt.savefig(str(save_path / 'movie_budget_by_percent.png'))
-plt.show()
+plt.savefig(str(save_path / 'avg_movie_budget_by_percent.png'))
 plt.close()
