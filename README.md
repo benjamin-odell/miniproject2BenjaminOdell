@@ -8,6 +8,13 @@
 Does budget effect how good a move is?
 This seeks to answer this question.
 
+This program creates two sets of charts. The first set is based on ranking movie scores based on a threshold.
+* Masterpiece: 100 - 85
+* Great: 85 - 75
+* Good: 75 - 60 
+* Okay: 60 - 50
+* Bad: 50 - 0
+
  
 ## Getting Started
  
@@ -38,3 +45,4 @@ Inspiration, code snippets, etc.
 * [Y Axis Formatting help](https://queirozf.com/entries/matplotlib-examples-number-formatting-for-axes-labels)
 * [Thousands Comma Tick Labels](https://stackoverflow.com/questions/38152356/dollar-sign-with-thousands-comma-tick-labels)
 * [Matplotlib Documentation](https://matplotlib.org/stable/tutorials/pyplot.html)
+* [Pandas Documentation](https://pandas.pydata.org/docs/)
