@@ -15,7 +15,7 @@ This program creates two sets of charts. The first set is based on ranking movie
 * Okay: 60 - 50
 * Bad: 50 - 0
 
-The next set of charts is based on the percentile of the movie's score. Each section consist of 10% of the movies.
+The next set of charts is based on the percentile of the movie's score. Each section consists of 10% of the movies.
 <br>
 90% means the movie is ranked better than 90% of movies in the dataset.
 
@@ -36,6 +36,9 @@ pip install -r requirements.txt
 Download the dataset [here](https://www.kaggle.com/datasets/ashpalsingh1525/imdb-movies-dataset).
 <br>
 Place the dataset into a folder called data in the folder where the project is stored.
+<br>
+I sorted the dataset by score of the movie. I then split the movies into chunks. Each chunk consists of about 760
+or ten percent of the total set. The charts then give the average score and budget for each one of these chunks.
  
 ### Executing program
  
@@ -49,7 +52,7 @@ Benjamin Odell
 ## Acknowledgments
  
 Inspiration, code snippets, etc.
-* [Dataset Used: ](https://www.kaggle.com/datasets/ashpalsingh1525/imdb-movies-dataset)
+* [Dataset Used](https://www.kaggle.com/datasets/ashpalsingh1525/imdb-movies-dataset)
 * [Y Axis Formatting help](https://queirozf.com/entries/matplotlib-examples-number-formatting-for-axes-labels)
 * [Thousands Comma Tick Labels](https://stackoverflow.com/questions/38152356/dollar-sign-with-thousands-comma-tick-labels)
 * [Matplotlib Documentation](https://matplotlib.org/stable/tutorials/pyplot.html)
