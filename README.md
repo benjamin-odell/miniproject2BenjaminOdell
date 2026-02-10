@@ -16,6 +16,8 @@ This program creates two sets of charts. The first set is based on ranking movie
 * Bad: 50 - 0
 
 The next set of charts is based on the percentile of the movie's score. Each section consist of 10% of the movies.
+<br>
+90% means the movie is ranked better than 90% of movies in the dataset.
 
  
 ## Getting Started
