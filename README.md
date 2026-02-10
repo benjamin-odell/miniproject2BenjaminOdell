@@ -15,7 +15,7 @@ This program creates two sets of charts. The first set is based on ranking movie
 * Okay: 60 - 50
 * Bad: 50 - 0
 
-The next set of charts is based on the percentile of the movie's score. Each section is consist of 10% of the movies.
+The next set of charts is based on the percentile of the movie's score. Each section consist of 10% of the movies.
 
  
 ## Getting Started
