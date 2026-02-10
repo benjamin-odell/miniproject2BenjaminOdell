@@ -5,7 +5,7 @@
 
 ## Description
  
-Does budget effect how good a move is?
+Does budget affect how good a move is?
 This seeks to answer this question.
 
 This program creates two sets of charts. The first set is based on ranking movie scores based on a threshold.
