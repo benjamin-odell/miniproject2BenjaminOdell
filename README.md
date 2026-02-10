@@ -33,7 +33,6 @@ pip install -r requirements.txt
 ### Installing
 
 * Download files and place in its own folder
-* You can change the stock tickers in stock_tickers.py if you want to look at different stocks
 
 ### Data
 Download the dataset [here](https://www.kaggle.com/datasets/ashpalsingh1525/imdb-movies-dataset).
