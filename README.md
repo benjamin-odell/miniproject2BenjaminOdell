@@ -15,19 +15,25 @@ This program creates two sets of charts. The first set is based on ranking movie
 * Okay: 60 - 50
 * Bad: 50 - 0
 
+The next set of charts is based on the percentile of the movie's score. Each section is consist of 10% of the movies.
+
  
 ## Getting Started
- 
+
+
 ### Dependencies
 ```
 pip install -r requirements.txt
 ```
-
- 
 ### Installing
 
 * Download files and place in its own folder
 * You can change the stock tickers in stock_tickers.py if you want to look at different stocks
+
+### Data
+Download the dataset [here](https://www.kaggle.com/datasets/ashpalsingh1525/imdb-movies-dataset).
+<br>
+Place the dataset into a folder called data in the folder where the project is stored.
  
 ### Executing program
  
