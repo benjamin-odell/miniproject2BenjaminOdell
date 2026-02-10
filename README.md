@@ -18,6 +18,11 @@ This program creates two sets of charts. The first set is based on ranking movie
 The next set of charts is based on the percentile of the movie's score. Each section consists of 10% of the movies.
 <br>
 90% means the movie is ranked better than 90% of movies in the dataset.
+<br>
+Place the dataset into a folder called data in the folder where the project is stored.
+<br>
+I sorted the dataset by score of the movie. I then split the movies into chunks. Each chunk consists of about 760
+or ten percent of the total set. The charts then give the average score and budget for each one of these chunks.
 
  
 ## Getting Started
@@ -34,11 +39,7 @@ pip install -r requirements.txt
 
 ### Data
 Download the dataset [here](https://www.kaggle.com/datasets/ashpalsingh1525/imdb-movies-dataset).
-<br>
-Place the dataset into a folder called data in the folder where the project is stored.
-<br>
-I sorted the dataset by score of the movie. I then split the movies into chunks. Each chunk consists of about 760
-or ten percent of the total set. The charts then give the average score and budget for each one of these chunks.
+
  
 ### Executing program
  
